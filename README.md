@@ -1,5 +1,3 @@
-# Neglesalong
-IM prosjekt, negletime bestilling
 Prosjektbeskrivelse – IT-utviklingsprosjekt (2IMI)
 Prosjekttittel
 Tittel på prosjektet
