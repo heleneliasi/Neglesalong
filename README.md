@@ -1,2 +1,51 @@
 # Neglesalong
 IM prosjekt, negletime bestilling
+Prosjektbeskrivelse – IT-utviklingsprosjekt (2IMI)
+Prosjekttittel
+Tittel på prosjektet
+
+Deltakere
+Navn 1 – rolle/ansvar
+Navn 2 – rolle/ansvar
+Navn 3 – rolle/ansvar (individuelt prosjekt: skriv "Individuelt prosjekt")
+1. Prosjektidé og problemstilling
+Beskrivelse
+Beskriv kort hva dere skal lage.
+
+Hva er prosjektet?
+Hvilket problem løser det?
+Hvorfor er løsningen nyttig?
+Målgruppe
+Hvem er løsningen laget for?
+
+2. Funksjonelle krav
+Systemet skal minst ha følgende funksjoner:
+
+Funksjon 1
+Funksjon 2
+Funksjon 3
+Funksjon 4
+Funksjon 5
+(Legg til flere hvis nødvendig)
+
+3. Teknologivalg
+Programmeringsspråk
+Eksempel: Python / JavaScript / C#
+Rammeverk / Plattform / Spillmotor
+Eksempel: Flask / Unity / Godot / .NET
+Database
+MariaDB
+Verktøy
+GitHub
+GitHub Projects (Kanban)
+Eventuelle andre verktøy
+4. Datamodell
+Oversikt over tabeller
+Tabell 1: - Navn: - Beskrivelse:
+
+Tabell 2: - Navn: - Beskrivelse:
+
+(Minst 2–4 tabeller)
+
+Eksempel på tabellstruktur
+```sql User( id INT PRIMARY KEY, username VARCHAR(50), email VARCHAR(100), password VARCHAR(255) )
