@@ -11,7 +11,7 @@ En type for nettbutikk, man skal kunne bestille en negletime hos vår salong.
 
 
 
-Hva er prosjektet?
+Hva er prosjektet? 
 Hvilket problem løser det?
 Hvorfor er løsningen nyttig?
 Målgruppe
@@ -25,6 +25,8 @@ Funksjon 2
 Funksjon 3
 Funksjon 4
 Funksjon 5
+
+f6
 (Legg til flere hvis nødvendig)
 
 3. Teknologivalg
