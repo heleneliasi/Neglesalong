@@ -26,7 +26,6 @@ Funksjon 3
 Funksjon 4
 Funksjon 5
 
-f6
 (Legg til flere hvis nødvendig)
 
 3. Teknologivalg
