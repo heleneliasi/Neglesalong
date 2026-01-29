@@ -1,14 +1,16 @@
 Prosjektbeskrivelse – IT-utviklingsprosjekt (2IMI)
-Prosjekttittel
-Tittel på prosjektet
+
+Neglesalong
 
 Deltakere
-Navn 1 – rolle/ansvar
-Navn 2 – rolle/ansvar
-Navn 3 – rolle/ansvar (individuelt prosjekt: skriv "Individuelt prosjekt")
+Navn 1 – Helen
+Navn 2 – Mila
+
 1. Prosjektidé og problemstilling
 Beskrivelse
 Beskriv kort hva dere skal lage.
+
+
 
 Hva er prosjektet?
 Hvilket problem løser det?
