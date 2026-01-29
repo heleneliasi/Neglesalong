@@ -6,9 +6,8 @@ Deltakere
 Navn 1 – Helen
 Navn 2 – Mila
 
-1. Prosjektidé og problemstilling
-Beskrivelse
-Beskriv kort hva dere skal lage.
+1. 
+En type for nettbutikk, man skal kunne bestille en negletime hos vår salong. 
 
 
 
