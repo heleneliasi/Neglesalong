@@ -7,15 +7,25 @@ Navn 1 – Helen
 Navn 2 – Mila
 
 1. 
-En type for nettbutikk, man skal kunne bestille en negletime hos vår salong. 
+Hva er prosjektet?
 
+Prosjektet er en nettside/nettbutikk der kunder kan bestille negletime direkte hos salongen. Nettsiden skal samle timebestilling på ett sted og gjøre prosessen enkel og oversiktlig.
 
-
-Hva er prosjektet? 
 Hvilket problem løser det?
+
+I dag må mange kunder bestille time ved å sende DM på Instagram. Dette kan føre til lang ventetid, misforståelser og tapte henvendelser, både for kunden og negleteknikeren.
+
 Hvorfor er løsningen nyttig?
+
+Løsningen gjør timebestilling raskere, mer effektiv og mer oversiktlig. Kundene kan bestille time når det passer dem, og negleteknikeren får bedre kontroll over timeplanen sin.
+
 Målgruppe
+
+Målgruppen er personer som liker negler, som regelmessig tar manikyr eller andre neglbehandlinger.
+
 Hvem er løsningen laget for?
+
+Løsningen er laget for både kunder og negleteknikere, siden den forenkler kommunikasjon, sparer tid og gir en bedre opplevelse for begge parter.
 
 2. Funksjonelle krav
 Systemet skal minst ha følgende funksjoner:
