@@ -49,13 +49,36 @@ GitHub,
 GitHub Projects (Kanban)
 
 ## 4. Datamodell
-Oversikt over tabeller
+### Oversikt over tabeller
 
-Tabell 1: - Navn: - Beskrivelse:
+**Tabell 1**
+- Navn: User  
+- Beskrivelse: Lagrer informasjon om kunder og negleteknikere
 
-Tabell 2: - Navn: - Beskrivelse:
+**Tabell 2**
+- Navn: Appointment  
+- Beskrivelse: Lagrer informasjon om bookede timer
 
-(Minst 2–4 tabeller)
+**Tabell 3**
+- Navn: Service  
+- Beskrivelse: Lagrer informasjon om ulike neglbehandlinger
 
-Eksempel på tabellstruktur
-```sql User( id INT PRIMARY KEY, username VARCHAR(50), email VARCHAR(100), password VARCHAR(255) )
+---
+
+### Eksempel på tabellstruktur
+
+```sql
+CREATE TABLE User (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    username VARCHAR(50),
+    email VARCHAR(100),
+    password VARCHAR(255)
+);
+
+CREATE TABLE Appointment (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    user_id INT,
+    date DATE,
+    time TIME,
+    FOREIGN KEY (user_id) REFERENCES User(id)
+);
