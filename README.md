@@ -31,19 +31,16 @@ Løsningen er laget for både kunder og negleteknikere, siden den forenkler komm
 ## 2. Funksjonelle krav
 Systemet skal minst ha følgende funksjoner:
 
-Funksjon 1
-Funksjon 2
-Funksjon 3
-Funksjon 4
-Funksjon 5
+1. Vise tilgjengelige timer
+2. Bestille negletime
+3. Lagre kundeinformasjon
+4. Administrere timeplan for negletekniker
 
-(Legg til flere hvis nødvendig)
 
 ## 3. Teknologivalg
 Programmeringsspråk
-Eksempel: Python / JavaScript / C#
-Rammeverk / Plattform / Spillmotor
-Eksempel: Flask / Unity / Godot / .NET
+Python / JavaScript / C#
+Eksempel: Flask 
 Database
 MariaDB
 Verktøy
