@@ -38,13 +38,13 @@ Systemet skal minst ha følgende funksjoner:
 
 
 ## 3. Teknologivalg
-Programmeringsspråk
+Programmeringsspråk:
 Python / JavaScript / C# / Flask 
 
-Database
+Database:
 MariaDB
 
-Verktøy
+Verktøy:
 GitHub
 GitHub Projects (Kanban)
 
