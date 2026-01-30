@@ -28,7 +28,7 @@ Målgruppen er personer som liker negler, som regelmessig tar manikyr eller andr
 Løsningen er laget for både kunder og negleteknikere, siden den forenkler kommunikasjon, sparer tid og gir en bedre opplevelse for begge parter.
 
 
-2. Funksjonelle krav
+## 2. Funksjonelle krav
 Systemet skal minst ha følgende funksjoner:
 
 Funksjon 1
@@ -39,7 +39,7 @@ Funksjon 5
 
 (Legg til flere hvis nødvendig)
 
-3. Teknologivalg
+## 3. Teknologivalg
 Programmeringsspråk
 Eksempel: Python / JavaScript / C#
 Rammeverk / Plattform / Spillmotor
