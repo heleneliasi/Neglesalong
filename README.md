@@ -39,16 +39,18 @@ Systemet skal minst ha følgende funksjoner:
 
 ## 3. Teknologivalg
 Programmeringsspråk
-Python / JavaScript / C#
-Eksempel: Flask 
+Python / JavaScript / C# / Flask 
+
 Database
 MariaDB
+
 Verktøy
 GitHub
 GitHub Projects (Kanban)
-Eventuelle andre verktøy
-4. Datamodell
+
+## 4. Datamodell
 Oversikt over tabeller
+
 Tabell 1: - Navn: - Beskrivelse:
 
 Tabell 2: - Navn: - Beskrivelse:
