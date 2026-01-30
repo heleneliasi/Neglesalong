@@ -45,7 +45,7 @@ Database:
 MariaDB
 
 Verktøy:
-GitHub
+GitHub,
 GitHub Projects (Kanban)
 
 ## 4. Datamodell
