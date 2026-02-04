@@ -7,10 +7,33 @@
 </head>
 <body>
     
+    <h1>Bestill time</h1>
 
+    <form method="POST">
 
+    Navn:
+    <input name="navn" required><br><br>
 
+    Email:
+    <input name="email" required><br><br>
 
+    Velg tjeneste:
+    <select name="service">
+    {% for service in services %}
+        <option value="{{ service[0] }}">
+            {{ service[1] }} – {{ service[2] }} kr
+        </option>
+    {% endfor %}
+    </select><br><br>
+
+    Dato:
+    <input type="date" name="dato" required><br><br>
+
+    <button type="submit">Bestill</button>
+
+    </form>
+
+    <a href="/">Tilbake</a>
     
 </body>
 </html>

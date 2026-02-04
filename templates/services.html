@@ -6,7 +6,15 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <h1>Tjenester</h1>
+
+    {% for service in services %}
+        <p>
+            {{ service[1] }} – {{ service[2] }} kr
+        </p>
+    {% endfor %}
+
+    <a href="/">Tilbake</a>
 
 
 
