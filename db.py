@@ -6,8 +6,8 @@ load_dotenv()  #Load .env file
 
 def get_connection():
     return mariadb.connect(
-        host=os.environ.get("10.200.14.17"),
-        user=os.environ.get("heleneliasi"),
-        password=os.environ.get("dorispillow123"),
-        database=os.environ.get("neglesalong")
+        host=os.environ.get("DB_HOST"),
+        user=os.environ.get("DB_USER"),
+        password=os.environ.get("DB_PASSWORD"),
+        database=os.environ.get("DB_NAME")
     )

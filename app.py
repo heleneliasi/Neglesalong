@@ -8,6 +8,14 @@ app = Flask(__name__)
 def index():
     return render_template("index.html")
 
+@app.route("/ping")
+def ping():
+    conn = get_connection()
+
+    if conn:
+        return "200" 
+    
+    return "Conn funker ikke"
 
 @app.route("/services")
 def services_page():
