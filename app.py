@@ -1,8 +1,26 @@
 from flask import Flask, render_template, request, redirect
 from db import get_connection
+import os
+import mariadb
+from dotenv import load_dotenv, find_dotenv
 
 app = Flask(__name__)
 
+
+dotenv_path = find_dotenv()
+load_dotenv(dotenv_path)  #Load .env file
+env_User = os.getenv("DB_USER")
+env_Host = os.getenv("DB_HOST")
+env_Password = os.getenv("DB_PASSWORD")
+env_Database = os.getenv("DB_NAME")
+
+def get_connection():
+    return mariadb.connect(
+        host = env_Host,
+        user = env_User,
+        password = env_Password,
+        database = env_Database
+    )
 
 @app.route("/")
 def index():
@@ -21,7 +39,7 @@ def ping():
 def services_page():
     mydb = get_connection()
     cursor = mydb.cursor()
-    cursor.execute("SELECT * FROM service")
+    cursor.execute("SELECT * FROM Service")
     services = cursor.fetchall()
     mydb.close()
     return render_template("services.html", services=services)
