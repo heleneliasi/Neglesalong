@@ -15,13 +15,16 @@
     <input name="navn" required><br><br>
 
     Email:
-    <input name="email" required><br><br>
+    <input name="email" type="email" required><br><br>
+    
+    Passord:
+    <input name="password" type="password" required><br><br>
 
     Velg tjeneste:
     <select name="service">
     {% for service in services %}
         <option value="{{ service[0] }}">
-            {{ service[1] }} – {{ service[2] }} kr
+            {{ service[1] }} – {{ service[3]|int }} kr
         </option>
     {% endfor %}
     </select><br><br>

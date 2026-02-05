@@ -1,10 +1,11 @@
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request, redirect, session
 from db import get_connection
 import os
 import mariadb
 from dotenv import load_dotenv, find_dotenv
 
 app = Flask(__name__)
+app.secret_key = os.getenv("SECRET_KEY", "dette-er-en-temp-secret")
 
 
 dotenv_path = find_dotenv()
@@ -45,16 +46,21 @@ def book_page():
     if request.method == "POST":
         navn = request.form["navn"]
         email = request.form["email"]
+        passord = request.form["password"]
         service_id = request.form["service"]
         dato = request.form["dato"]
 
         #legger til en bruker
         cursor.execute(
-            "INSERT INTO users (name, email) VALUES (%s, %s)",
-            (navn, email)
+            "INSERT INTO users (username, email, password) VALUES (%s, %s, %s)",
+            (navn, email, passord)
         )
         mydb.commit()
         user_id = cursor.lastrowid
+
+
+        session['user_id'] = user_id
+        session['username'] = navn
 
         #legg til time bestilt
         cursor.execute(
