@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 
 dotenv_path = find_dotenv()
-load_dotenv(dotenv_path)  #Load .env file
+load_dotenv(dotenv_path)  #last .env fila
 env_User = os.getenv("DB_USER")
 env_Host = os.getenv("DB_HOST")
 env_Password = os.getenv("DB_PASSWORD")
@@ -26,14 +26,6 @@ def get_connection():
 def index():
     return render_template("index.html")
 
-@app.route("/ping")
-def ping():
-    conn = get_connection()
-
-    if conn:
-        return "200" 
-    
-    return "Conn funker ikke"
 
 @app.route("/services")
 def services_page():
@@ -56,7 +48,7 @@ def book_page():
         service_id = request.form["service"]
         dato = request.form["dato"]
 
-        # legg til bruker
+        #legger til en bruker
         cursor.execute(
             "INSERT INTO user (name, email) VALUES (%s, %s)",
             (navn, email)
@@ -64,7 +56,7 @@ def book_page():
         mydb.commit()
         user_id = cursor.lastrowid
 
-        # legg til time
+        #legg til time bestilt
         cursor.execute(
             "INSERT INTO appointment (user_id, service_id, date) VALUES (%s, %s, %s)",
             (user_id, service_id, dato)
