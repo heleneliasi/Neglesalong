@@ -48,7 +48,7 @@ def book_page():
         email = request.form["email"]
         passord = request.form["password"]
         service_id = request.form["service"]
-        dato = request.form["dato"]
+        date = request.form["dato"]
 
         #legger til en bruker
         cursor.execute(
@@ -65,7 +65,7 @@ def book_page():
         #legg til time bestilt
         cursor.execute(
             "INSERT INTO appointment (user_id, service_id, date) VALUES (%s, %s, %s)",
-            (user_id, service_id, dato)
+            (user_id, service_id, date)
         )
         mydb.commit()
 
