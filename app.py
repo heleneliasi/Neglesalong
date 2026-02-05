@@ -31,7 +31,7 @@ def index():
 def services_page():
     mydb = get_connection()
     cursor = mydb.cursor()
-    cursor.execute("SELECT * FROM Service")
+    cursor.execute("SELECT * FROM service")
     services = cursor.fetchall()
     mydb.close()
     return render_template("services.html", services=services)
@@ -50,7 +50,7 @@ def book_page():
 
         #legger til en bruker
         cursor.execute(
-            "INSERT INTO user (name, email) VALUES (%s, %s)",
+            "INSERT INTO users (name, email) VALUES (%s, %s)",
             (navn, email)
         )
         mydb.commit()
@@ -64,7 +64,9 @@ def book_page():
         mydb.commit()
 
         mydb.close()
-        return redirect("/")
+        return redirect("/book")
+    
+    
 
     cursor.execute("SELECT * FROM service")
     services = cursor.fetchall()
