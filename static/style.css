@@ -13,3 +13,24 @@
     width: 30%;
     height: auto;
 }
+
+.button {
+    display: flex;
+    gap: 100px; /* Space between buttons */
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.button a {
+    background-color: #f4c2c2; /* Pink color from your image */
+    color: white;
+    padding: 90px 140px;
+    text-decoration: none;
+    border-radius: 15px;
+    font-size: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.button a:hover {
+    background-color: #f0a8a8; /* Slightly darker on hover */
+}
