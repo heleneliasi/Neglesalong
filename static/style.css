@@ -1,28 +1,33 @@
-.body {
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
     margin: 0;
-    padding: 0; 
-  }
-
-.logo {
+    padding: 20px;
     text-align: center;
-    margin-bottom: 2%;
-    margin-top: -5%;
 }
 
-.logo img{
+/* Logo */
+.logo {
+    text-align: center;
+    margin: -80px 0;
+}
+
+.logo img {
+    max-width: 400px;
     width: 30%;
     height: auto;
 }
 
+/* Home page buttons */
 .button {
     display: flex;
-    gap: 100px; /* Space between buttons */
+    gap: 100px;
     justify-content: center;
-    margin: 20px 0;
+    margin: 80px 0;
 }
 
 .button a {
-    background-color: #f4c2c2; /* Pink color from your image */
+    background-color: #f4c2c2;
     color: white;
     padding: 90px 140px;
     text-decoration: none;
@@ -32,5 +37,83 @@
 }
 
 .button a:hover {
-    background-color: #f0a8a8; /* Slightly darker on hover */
+    background-color: #f0a8a8;
+}
+
+/* Services page */
+.subtitle {
+    background-color: #f4c2c2;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 25px;
+    display: inline-block;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+.subtitle p {
+    margin: 0;
+    font-size: 20px;
+}
+
+.services-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 30px auto;
+    flex-wrap: wrap;
+    max-width: 1000px;
+}
+
+.service-card {
+    text-align: center;
+}
+
+.service-card img {
+    width: 240px;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.service-info {
+    background-color: #f4c2c2;
+    color: white;
+    padding: 15px 20px;
+    margin-top: -5px;
+    border-radius: 20px;
+}
+
+.service-info h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.book-button {
+    margin: 30px 0 20px 0;
+}
+
+.book-button a {
+    background-color: #f4c2c2;
+    color: white;
+    padding: 15px 50px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 18px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.book-button a:hover {
+    background-color: #f0a8a8;
+}
+
+.back-link {
+    color: blue;
+    text-decoration: underline;
+    display: inline-block;
+    margin-top: 10px;
 }
