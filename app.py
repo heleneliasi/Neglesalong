@@ -49,6 +49,7 @@ def book_page():
         passord = request.form["password"]
         service_id = request.form["service"]
         date = request.form["dato"]
+        time = request.form["tid"]
 
         #legger til en bruker
         cursor.execute(
@@ -64,9 +65,26 @@ def book_page():
 
         #legg til time bestilt
         cursor.execute(
-            "INSERT INTO appointment (user_id, service_id, date) VALUES (%s, %s, %s)",
-            (user_id, service_id, date)
+            "INSERT INTO appointment (user_id, service_id, date, time) VALUES (%s, %s, %s, %s)",
+            (user_id, service_id, date, time)
         )
+
+        cursor.execute(
+            ("SELECT name, price FROM service WHERE id=%s", (service_id,))
+            service = cursor.fetchone()
+        
+            
+
+            return render_template(
+                "confirmation.html",
+                navn=navn,
+                service=service,
+                date=date,
+                time=time
+            )
+        )
+        
+
         mydb.commit()
 
         mydb.close()
