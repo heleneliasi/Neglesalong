@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, session
+from flask import Flask, render_template, request, redirect, session, flash
 from db import get_connection
 import os
 import mariadb
@@ -60,36 +60,21 @@ def book_page():
         user_id = cursor.lastrowid
 
 
-        session['user_id'] = user_id
-        session['username'] = navn
+        session["user_id"] = user_id
+        session["username"] = navn
 
         #legg til time bestilt
         cursor.execute(
             "INSERT INTO appointment (user_id, service_id, date, time) VALUES (%s, %s, %s, %s)",
             (user_id, service_id, date, time)
         )
-
-        cursor.execute(
-            ("SELECT name, price FROM service WHERE id=%s", (service_id,))
-            service = cursor.fetchone()
-        
-            
-
-            return render_template(
-                "confirmation.html",
-                navn=navn,
-                service=service,
-                date=date,
-                time=time
-            )
-        )
-        
-
         mydb.commit()
+        
 
-        mydb.close()
+
+        flash("Tusen takk for bestillingen! Vi gleder oss til å se deg <3")
+
         return redirect("/book")
-    
     
 
     cursor.execute("SELECT * FROM service")
