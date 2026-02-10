@@ -105,13 +105,13 @@ def book_side():
         mydb.commit()
 
         session["user_id"] = cursor.lastrowid
-        session["uername"]= navn
+        session["username"]= navn
 
         flash ("Bruker opprettet! Du er nå innlogget.")
         return redirect("/book")
     
 
-    return redirect("registrer.html")
+    return render_template("registrer.html")
 
 
 @app.route("/login", methods=["GET", "POST"])
