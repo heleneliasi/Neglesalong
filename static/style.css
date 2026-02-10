@@ -118,5 +118,48 @@ body {
     margin-top: 10px;
 }
 
+/* Log in page */
+
+.subtitle h1 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.login {
+    background-color: #f4c2c2;
+    color: white;
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.login input {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    width: 200px;
+    margin-left: 10px;
+}
+
+.login button {
+    background-color: #e89999;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.login button:hover {
+    background-color: #e07d7d;
+}
+
+.login a {
+    color: #8b4444;
+    font-weight: bold;
+}
+
 
 
