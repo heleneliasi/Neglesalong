@@ -6,42 +6,16 @@
     <title>Document</title>
 </head>
 <body>
-     {% with messages = get_flashed_messages() %}
-      {% if messages %}
-          {% for message in messages %}
-            <li>{{ message }}</li>
-          {% endfor %}
-        </ul>
-      {% endif %}
-    {% endwith %}
-
-    
-
-
-
-
-
-
     <h1>Bestill time</h1>
 
-    <form method="POST">
-
-    Navn:
-    <input name="navn" required><br><br>
-
-    Email:
-    <input name="email" type="email" required><br><br>
-    
-    Passord:
-    <input name="password" type="password" required><br><br>
-
+<form method="POST">
     Velg tjeneste:
-    <select name="service">
-    {% for service in services %}
-        <option value="{{ service[0] }}">
-            {{ service[1] }} – {{ service[3]|int }} kr
-        </option>
-    {% endfor %}
+    <select name="service" required>
+        {% for service in services %}
+            <option value="{{ service[0] }}">
+                {{ service[1] }} – {{ service[3]|int }} kr
+            </option>
+        {% endfor %}
     </select><br><br>
 
     Dato:
@@ -55,10 +29,24 @@
     </select><br><br>
 
     <button type="submit">Bestill</button>
+</form>
 
-    </form>
+<p>
+    Bestilt time før? <a href="/login">Logg inn her</a>
+</p>
 
-    <a href="/">Tilbake</a>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul>
+      {% for message in messages %}
+        <li>{{ message }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+
+
+
     
 </body>
 </html>

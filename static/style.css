@@ -97,7 +97,7 @@ body {
 }
 
 .book-button a {
-    background-color: #f4c2c2;
+    background-color: #e22121;
     color: white;
     padding: 15px 50px;
     text-decoration: none;
@@ -119,12 +119,4 @@ body {
 }
 
 
- {
-    background-color: #f4c2c2;
-    color: white;
-    padding: 15px 30px;
-    border-radius: 25px;
-    display: inline-block;
-    margin: 5px;
-    max-width: 600px;
-}
+
