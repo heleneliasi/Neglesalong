@@ -133,7 +133,7 @@ def login():
         if user and user [2] == passord:
             session["user_id"] = user[0]
             session["username"] = user[1]
-            flash("Fwil email eller passord")
+            flash("Feil email eller passord")
             return redirect("/book")
         
         flash("Feil email eller passord")
