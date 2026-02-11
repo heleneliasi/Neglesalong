@@ -122,7 +122,7 @@ body {
 
 .subtitle h1 {
     margin: 0;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 .login {
@@ -151,6 +151,11 @@ body {
     border-radius: 8px;
     cursor: pointer;
     margin-top: 10px;
+    font-size: 20px;
+}
+
+.login p{
+    font-size: 20px;
 }
 
 .login button:hover {
@@ -174,6 +179,10 @@ body {
     margin-top: 40px;
 }
 
+.booking p{
+    font-size: 20px;
+}
+
 .booking input,
 .booking select {
     padding: 10px;
@@ -195,6 +204,7 @@ body {
     border-radius: 8px;
     cursor: pointer;
     margin-top: 10px;
+    font-size: 20px;
 }
 
 .booking button:hover {
