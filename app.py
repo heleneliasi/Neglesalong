@@ -5,7 +5,7 @@ import mariadb
 from dotenv import load_dotenv, find_dotenv
 
 app = Flask(__name__)
-app.secret_key = os.getenv("SECRET_KEY", "dette-er-en-temp-secret")
+app.secret_key = os.getenv("SECRET_KEY", "temp-secret")
 
 
 dotenv_path = find_dotenv()
