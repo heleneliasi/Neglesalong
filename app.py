@@ -31,7 +31,7 @@ def index():
 
 
 
-@app.route("/services")
+@app.route("/services", methods=["GET", "POST"])
 def services_side():
     mydb = get_connection()
     cursor = mydb.cursor()
