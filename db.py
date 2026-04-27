@@ -11,4 +11,3 @@ def get_connection():
         password=os.environ.get("DB_PASSWORD"),
         database=os.environ.get("DB_NAME")
     )
- 
