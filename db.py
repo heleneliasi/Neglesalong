@@ -1,11 +1,11 @@
 import os
-import mariadb
+import mysql.connector
 from dotenv import load_dotenv
  
 load_dotenv()  #Load .env file
  
 def get_connection():
-    return mariadb.connect(
+    return mysql.connector.connect(
         host=os.environ.get("DB_HOST"),
         user=os.environ.get("DB_USER"),
         password=os.environ.get("DB_PASSWORD"),

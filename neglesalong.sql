@@ -18,6 +18,8 @@ CREATE TABLE appointment (
     service_id INT NOT NULL,
     date DATE NOT NULL,
     time TIME NOT NULL,
-    FOREIGN KEY (user_id) REFERENCES User(id),
-    FOREIGN KEY (service_id) REFERENCES Service(id)
+    FOREIGN KEY (user_id) REFERENCES users(id),
+    FOREIGN KEY (service_id) REFERENCES service(id)
 );
+
+-- bytta User til users og Service med service

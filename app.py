@@ -1,7 +1,6 @@
 from flask import Flask, render_template, request, redirect, session, flash
 from db import get_connection
 import os
-import mariadb
 from dotenv import load_dotenv, find_dotenv
 
 app = Flask(__name__)
@@ -10,20 +9,6 @@ app.secret_key = os.getenv("SECRET_KEY", "temp-secret")
 
 dotenv_path = find_dotenv()
 load_dotenv(dotenv_path)  #last .env fila
-env_User = os.getenv("DB_USER")
-env_Host = os.getenv("DB_HOST")
-env_Password = os.getenv("DB_PASSWORD")
-env_Database = os.getenv("DB_NAME")
-
-def get_connection():
-    return mariadb.connect(
-        host = env_Host,
-        user = env_User,
-        password = env_Password,
-        database = env_Database
-    )
-
-
 
 @app.route("/")
 def index():
@@ -133,7 +118,7 @@ def login():
         if user and user [2] == passord:
             session["user_id"] = user[0]
             session["username"] = user[1]
-            flash("Feil email eller passord")
+            flash("Velkommen tilbake!")
             return redirect("/book")
         
         flash("Feil email eller passord")
