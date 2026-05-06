@@ -9,3 +9,4 @@ packaging==26.0
 Werkzeug==3.1.5
 mysql-connector-python==9.7.0
 python-dotenv==1.2.2
+waitress==3.0.2
