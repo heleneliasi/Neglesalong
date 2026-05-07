@@ -16,7 +16,6 @@ def index():
     return render_template("index.html")
 
 
-
 @app.route("/services", methods=["GET", "POST"])
 def services_side():
     mydb = get_connection()
@@ -63,9 +62,6 @@ def login_registrer():
 
 @app.route("/registrer", methods=["GET", "POST"])
 def book_side():
-    mydb = get_connection()
-    cursor = mydb.cursor()
-
     if request.method == "POST":
         navn = request.form["navn"]
         email = request.form["email"]
@@ -133,8 +129,6 @@ def logout():
     return redirect("/")
 
             
-
-
 
 
 if __name__ == '__main__':
