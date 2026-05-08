@@ -1,33 +1,33 @@
-#   Environment variables
+#Environment variables
 .env
 *.env
 
-#   Python cache / compiled files
+#Python cache / compiled files
 __pycache__/
 *.py[cod]
 *$py.class
 
-#   Virtual environments
+#Virtual environments
 .venv/
 venv/
 env/
 ENV/
 .conda/
 
-#   VS Code / JetBrains
+#VS Code/JetBrains
 .vscode/
 .idea/
 
-#   Flask / Werkzeug
+#flask/Werkzeug
 instance/
 *.db
 *.sqlite3
 
-#   Logs
+# logs
 *.log
 logs/
 
-#   Tests / coverage
+# tests / coverage
 htmlcov/
 .tox/
 .nox/
@@ -36,14 +36,14 @@ htmlcov/
 coverage.xml
 *.cover
 
-#   macOS specific
+
 .DS_Store
 
-#   Node (if using front-end assets)
+#node (if using front-end assets)
 node_modules/
 npm-debug.log*
 
-#   Docker
+#docker
 docker-compose.override.yml
 .docker/
 
