@@ -48,10 +48,17 @@ def login_registrer():
         )
         mydb.commit()
 
-        flash("Tusen takk for bestillingen! Vi gleder oss til å se deg <3")
-        return redirect("/book")
-    
+        cursor.execute("SELECT name FROM service WHERE id=%s", (service_id,))
+        service = cursor.fetchone()  
+        mydb.close()
 
+        return render_template("confirmation.html",  
+            navn=session["username"],
+            tjeneste=service[0],
+            dato=date,
+            tid=time
+        )
+    
     cursor.execute("SELECT * FROM service")
     services = cursor.fetchall()
     mydb.close()
@@ -137,6 +144,7 @@ if __name__ == '__main__':
 
 
 
+# tidligere forsøk på admin side
 # session["role"] = user[3]  # henter role fra databasen
 # Og så sjekker du rollen i rutene:
 # python@app.route("/admin")
@@ -148,9 +156,4 @@ if __name__ == '__main__':
 #         return redirect("/")
 #     return render_template("admin.html")
 
-# from werkzeug.security import generate_password_hash, check_password_hash
-# I /registrer – hash passordet:
-# pythonpassord = request.form["password"]
-# hashed = generate_password_hash(passord)
-# I /login – sjekk passordet:
-# pythonif user and check_password_hash(user[2], passord):
+
