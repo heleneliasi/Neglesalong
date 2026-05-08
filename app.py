@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect, session, flash
 from db import get_connection
+from werkzeug.security import generate_password_hash, check_password_hash
 from waitress import serve
 import os
 from dotenv import load_dotenv, find_dotenv
@@ -65,7 +66,7 @@ def book_side():
     if request.method == "POST":
         navn = request.form["navn"]
         email = request.form["email"]
-        passord = request.form["password"]
+        passord = generate_password_hash(request.form["password"])
 
         mydb = get_connection()
         cursor = mydb.cursor()
@@ -112,7 +113,7 @@ def login():
         user = cursor.fetchone()
         mydb.close()
 
-        if user and user [2] == passord:
+        if user and check_password_hash(user[2], passord):
             session["user_id"] = user[0]
             session["username"] = user[1]
             flash("Velkommen tilbake!")
@@ -133,3 +134,23 @@ def logout():
 
 if __name__ == '__main__':
     serve(app, host='0.0.0.0', port=8080)
+
+
+
+# session["role"] = user[3]  # henter role fra databasen
+# Og så sjekker du rollen i rutene:
+# python@app.route("/admin")
+# def admin():
+#     if "user_id" not in session:
+#         return redirect("/login")
+#     if session["role"] != "admin":
+#         flash("Du har ikke tilgang!")
+#         return redirect("/")
+#     return render_template("admin.html")
+
+# from werkzeug.security import generate_password_hash, check_password_hash
+# I /registrer – hash passordet:
+# pythonpassord = request.form["password"]
+# hashed = generate_password_hash(passord)
+# I /login – sjekk passordet:
+# pythonif user and check_password_hash(user[2], passord):

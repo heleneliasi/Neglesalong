@@ -2,7 +2,7 @@ import os
 import mysql.connector
 from dotenv import load_dotenv
  
-load_dotenv()  #Load .env file
+load_dotenv()  #last .env file
  
 def get_connection():
     return mysql.connector.connect(
