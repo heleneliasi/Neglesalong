@@ -136,11 +136,40 @@ def logout():
     session.clear()
     return redirect("/")
 
+@app.route("/faq")
+def fag():
+    return render_template("faq.html")
             
+@app.route("/sendinn", methods=["GET", "POST"])
+def sendinn():
+    if request.emthod == "POST":
+        navn = request.form.get("navn", "").strip()
+        email = request.form.get("email", "").strip()
+        sporsmal = request.form.get("sporsmal", "").strip()
 
+        if not sporsmal:
+            flash("Du må skrive inn et spørsmål.")
+            return redirect("/sendinn")
+        
+        mydb = get_connection()
+        cursor = mydb.cursor()
+        cursor.execute(
+            "INSERT INTO questions (name, email, question) VALUES (%s, %s, %s)",
+            (navn, email, sporsmal)
+        )
+        mydb.commit()
+        mydb.close()
+
+        flash("Takk! Spørsmålet ditt er sendt")
+        return redirect("/faq")
+    
+    return render_template("sendinn.html")
 
 if __name__ == '__main__':
     serve(app, host='0.0.0.0', port=8080)
+
+
+
 
 
 

@@ -215,3 +215,100 @@ body {
     color: #5a2020;
     font-weight: bold;
 }
+
+
+
+
+/* FAQ page */
+.faq-container {
+    max-width: 700px;
+    margin: 30px auto;
+    text-align: left;
+}
+ 
+.faq-item {
+    border-bottom: 1px solid #f0c0c0;
+    margin-bottom: 5px;
+}
+ 
+.faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 18px 10px;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    color: #5a2020;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+}
+ 
+.faq-question:hover {
+    color: #e89999;
+}
+ 
+.faq-icon {
+    font-size: 24px;
+    color: #e89999;
+    flex-shrink: 0;
+    margin-left: 10px;
+}
+ 
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    padding: 0 10px;
+}
+ 
+.faq-answer.open {
+    max-height: 200px;
+    padding: 0 10px 15px 10px;
+}
+ 
+.faq-answer p {
+    margin: 0;
+    font-size: 16px;
+    color: #555;
+}
+ 
+.faq-send-section {
+    text-align: center;
+    margin: 40px 0 30px 0;
+}
+ 
+.faq-send-section p {
+    font-size: 18px;
+    color: #5a2020;
+    margin-bottom: 15px;
+}
+ 
+.book-button-link {
+    background-color: #d16b6b;
+    color: white;
+    padding: 15px 50px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 18px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+ 
+.book-button-link:hover {
+    background-color: #c55555;
+}
+ 
+/* Textarea i send-spørsmål */
+.login textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    width: 200px;
+    margin-left: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    resize: vertical;
+}
