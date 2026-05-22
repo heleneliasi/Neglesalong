@@ -142,7 +142,7 @@ def fag():
             
 @app.route("/sendinn", methods=["GET", "POST"])
 def sendinn():
-    if request.emthod == "POST":
+    if request.method == "POST":
         navn = request.form.get("navn", "").strip()
         email = request.form.get("email", "").strip()
         sporsmal = request.form.get("sporsmal", "").strip()

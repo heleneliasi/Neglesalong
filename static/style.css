@@ -93,7 +93,26 @@ body {
 }
 
 .book-button {
-    margin: -20px 0 20px 0;
+    margin: -50px 0 -50px 0;
+}
+
+.book-button2 {
+    margin: 20px 0 20px 0;
+}
+
+.book-button2 a {
+    background-color: #d16b6b;
+    color: white;
+    padding: 15px 50px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 18px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.book-button2 a:hover {
+    background-color: #c55555;
 }
 
 .book-button a {
